@@ -1,0 +1,26 @@
+{% extends 'news/base.html' %}
+{% block title %} Technology {% endblock %}
+
+{%block content%}
+<h1 class="text-center">Technology News</h1>
+
+
+<div class="container">
+    {%for new,des,i,u,d,a in mylist%}
+
+    <h3>News:</h3>{{new}} 
+    {{value|linebreaks}}
+
+    Published at: <b> {{d}}</b>
+    {{value|linebreaks}}
+
+
+    <h4>Description: </h4>{{des}}<a href="{{u}}" target="_blank"> full news</a>
+    {{value|linebreaks}}
+    <h6>Author: {{a}}</h6>
+    {{value|linebreaks}}
+    <img src="{{i}}" alt="">
+    {{value|linebreaks}}
+    {%endfor%}
+</div>
+{%endblock%}

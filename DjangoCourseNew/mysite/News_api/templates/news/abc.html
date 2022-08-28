@@ -1,0 +1,18 @@
+{% extends 'news/base.html' %}
+{% block title %}ABC News{% endblock %}
+{%block abc%}active{%endblock%}
+{%block content%}
+<h1 class="text-center">ABC Latest News</h1>
+
+<div class="container">
+    {% for new,des,i,u,a in mylist%}
+    <h2>News: </h2>{{new}}
+    <h4>Description: </h4>{{des}}<a href="{{u}}" target="_blank"> read more</a>
+    {{value|linebreaks}}
+    <h6>Author: {{a}}</h6>
+    {{value|linebreaks}}
+    <img src="{{i}}" alt="">
+    {{value|linebreaks}}
+    {%endfor%}
+</div>
+{%endblock%}

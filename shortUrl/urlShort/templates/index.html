@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>
+        URL Shortner
+    </title>
+    <style>
+        table {
+            margin-left: 650px;
+        }
+    </style>
+</head>
+<body>
+    {% if messages %}
+    {% for message in messages %}
+    {% if message.tags %}
+    <script>alert("{{ message }}")</script> {% endif %}
+    {% endfor %}
+    {% endif %}
+    <a href="urlcreated" style="font-size: 25px; ">View Url</a>
+    <div class="container my-3">
+    <h1 align="center">URL Shortner</h1>
+    <form action="createurl" method="POST">
+        {% csrf_token %}
+        <table>
+            <tbody>
+                <tr>
+                    <td><label>URL</label></td>
+                    <td><input type="text" id="url" name="url"></td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Submit</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+</body>
+ 
+</html>

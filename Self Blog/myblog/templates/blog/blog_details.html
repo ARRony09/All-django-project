@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+
+{% block title %}Details{%endblock title%}
+
+{% block body %}
+<article class="container">
+    <h3 class="text-center">{{post.title}}</h3>
+    <p class="blog-post-meta"><strong>{{post.created_on}} by <a href="#">{{post.author}}</strong></a></p>
+    <p>{{post.content}}</p>
+</article>
+{% endblock %}
